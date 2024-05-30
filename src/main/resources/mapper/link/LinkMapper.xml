@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.panta.mapper.link.LinkMapper">
+    <resultMap id="BaseResultMap" type="com.panta.model.link.LinkModel">
+        <id property="id" column="id"/>
+        <id property="name" column="name" />
+        <id property="number" column="number" />
+        <id property="linkAddress" column="linkAddress" />
+        <id property="imgAddress" column="imgAddress" />
+    </resultMap>
+
+    <select id="queryDataList" resultMap="BaseResultMap">
+        SELECT id,`name`,`number`,linkAddress,imgAddress FROM panta_link a
+    </select>
+    
+    <insert id="saveData" parameterType="com.panta.model.link.LinkModel">
+        INSERT INTO `panta`.`panta_link`
+        ( `name`, `number`, `linkAddress`, `imgAddress`) 
+         VALUES
+        (#{name}, #{number}, #{linkAddress}, #{imgAddress})
+    </insert>
+
+</mapper>
