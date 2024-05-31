@@ -23,4 +23,9 @@ public class LinkServiceImpl implements ILinkService {
     public void saveData(LinkModel lm) {
         linkMapper.saveData(lm);
     }
+
+    @Override
+    public void deleteData(LinkModel lm) {
+        linkMapper.deleteData(lm);
+    }
 }

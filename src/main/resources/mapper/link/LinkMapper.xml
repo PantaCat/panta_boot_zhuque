@@ -17,10 +17,14 @@
     </select>
     
     <insert id="saveData" parameterType="com.panta.model.link.LinkModel">
-        INSERT INTO `panta`.`panta_link`
+        INSERT INTO `panta_link`
         ( `name`, `number`, `linkAddress`, `imgAddress`) 
          VALUES
         (#{name}, #{number}, #{linkAddress}, #{imgAddress})
     </insert>
+    
+    <delete id="deleteData" parameterType="com.panta.model.link.LinkModel">
+        DELETE FROM panta_link where id = #{id}
+    </delete>
 
 </mapper>

@@ -9,4 +9,6 @@ public interface ILinkService {
     
     List<LinkModel> queryDataList();
     void saveData(LinkModel lm);
+    void deleteData(LinkModel lm);
+
 }
