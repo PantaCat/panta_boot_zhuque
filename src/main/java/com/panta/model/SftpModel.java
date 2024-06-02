@@ -1,4 +1,4 @@
-package com.panta.model.link;
+package com.panta.model;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

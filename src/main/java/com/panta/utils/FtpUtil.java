@@ -1,7 +1,7 @@
 package com.panta.utils;
 
 import com.jcraft.jsch.*;
-import com.panta.model.link.SftpModel;
+import com.panta.model.SftpModel;
 
 import java.io.InputStream;
 

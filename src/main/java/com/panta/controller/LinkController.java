@@ -1,11 +1,10 @@
 package com.panta.controller;
 
 import com.panta.model.link.LinkModel;
-import com.panta.model.link.SftpModel;
+import com.panta.model.SftpModel;
 import com.panta.service.link.ILinkService;
 import com.panta.utils.FtpUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
