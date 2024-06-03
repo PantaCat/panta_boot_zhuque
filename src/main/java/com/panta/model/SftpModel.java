@@ -10,8 +10,8 @@ public class SftpModel {
     public static int port;
     public static String userName;
     public static String passWord;
-    public static String basePath;
-    public static String baseUrl;
+    public static String imgBasePath;
+    public static String imgBaseUrl;
     
     @Value("${SFTP.ADDRESS}")
     public void setHost(String host) {
@@ -34,12 +34,12 @@ public class SftpModel {
     }
     
     @Value("${SFTP.BASEPATH}")
-    public void setBasePath(String basePath) {
-        this.basePath = basePath;
+    public void setImgBasePath(String imgBasePath) {
+        this.imgBasePath = imgBasePath;
     }
     
     @Value("${IMAGE.BASE.URL}")
-    public void setBaseUrl(String baseUrl) {
-        this.baseUrl = baseUrl;
+    public void setImgBaseUrl(String imgBaseUrl) {
+        this.imgBaseUrl = imgBaseUrl;
     }
 }

@@ -14,11 +14,11 @@ public class ArrangeModle implements Serializable {
      */
     private String name;
     /**
-     * 本地地址
-     */
-    private String localhostAddress;
-    /**
      * 服务器地址
      */
     private String linuxAddress;
+    /**
+     * 执行命令
+     */
+    private String executeCommand;
 }

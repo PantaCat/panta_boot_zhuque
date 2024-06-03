@@ -11,5 +11,6 @@ public interface IArrangeService {
 
     void updateData(ArrangeModle am);
     void deleteData(ArrangeModle am);
+    void arrangeData(ArrangeModle am);
 
 }

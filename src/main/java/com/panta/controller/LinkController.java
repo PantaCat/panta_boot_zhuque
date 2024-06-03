@@ -33,12 +33,18 @@ public class LinkController {
         return ResponseEntity.ok("ok");
     }
 
+    @PostMapping("/updateData")
+    public ResponseEntity<String> updateData(@RequestBody LinkModel lm) {
+        linkService.updateData(lm);
+        return ResponseEntity.ok("ok");
+    }
+
     @PostMapping("/uploadFile")
     public ResponseEntity<String> uploadFile(@RequestParam("imgFile") MultipartFile imgFile) throws IOException {
         String fileName = imgFile.getOriginalFilename();
         InputStream input = imgFile.getInputStream();
-        FtpUtil.uploadFile(input, fileName);
-        return ResponseEntity.ok(SftpModel.baseUrl+fileName);
+        FtpUtil.uploadFile(input, fileName,SftpModel.imgBasePath);
+        return ResponseEntity.ok(SftpModel.imgBaseUrl+fileName);
     }
 
     @PostMapping("/deleteData")

@@ -7,23 +7,23 @@
     <resultMap id="BaseResultMap" type="com.panta.model.arrange.ArrangeModle">
         <id property="id" column="id"/>
         <id property="name" column="name" />
-        <id property="localhostAddress" column="localhostAddress" />
         <id property="linuxAddress" column="linuxAddress" />
+        <id property="executeCommand" column="executeCommand" />
     </resultMap>
 
     <select id="queryDataList" resultMap="BaseResultMap">
-        SELECT id,`name`,localhostAddress,linuxAddress FROM panta_arrangeProject a
+        SELECT id,`name`,linuxAddress,executeCommand FROM panta_arrangeProject a
     </select>
     
     <insert id="saveData" parameterType="com.panta.model.arrange.ArrangeModle">
         INSERT INTO `panta_arrangeProject`
-        ( `name`, `localhostAddress`, `linuxAddress`)
+        ( `name`, `linuxAddress`, `executeCommand`)
          VALUES
-        (#{name}, #{localhostAddress}, #{linuxAddress})
+        (#{name}, #{linuxAddress}, #{executeCommand})
     </insert>
 
     <update id="updateData" parameterType="com.panta.model.arrange.ArrangeModle">
-        UPDATE panta_arrangeProject SET name = #{name} ,localhostAddress = #{localhostAddress} , linuxAddress = #{linuxAddress} WHERE id = #{id}
+        UPDATE panta_arrangeProject SET name = #{name} , linuxAddress = #{linuxAddress},executeCommand = #{executeCommand}  WHERE id = #{id}
     </update>
     
     <delete id="deleteData" parameterType="com.panta.model.arrange.ArrangeModle">

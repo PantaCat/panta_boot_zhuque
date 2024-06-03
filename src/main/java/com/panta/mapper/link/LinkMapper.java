@@ -9,5 +9,6 @@ import java.util.List;
 public interface LinkMapper {
     List<LinkModel> queryDataList();
     int saveData(LinkModel lm);
+    int updateData(LinkModel lm);
     int deleteData(LinkModel lm);
 }

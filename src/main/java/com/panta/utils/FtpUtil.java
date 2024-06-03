@@ -6,7 +6,7 @@ import com.panta.model.SftpModel;
 import java.io.InputStream;
 
 public class FtpUtil {
-    public static void uploadFile(InputStream input , String fileName ) {
+    public static void uploadFile(InputStream input , String fileName ,String basePath) {
         JSch jsch = new JSch();
         Session session = null;
         Channel channel = null;
@@ -23,7 +23,7 @@ public class FtpUtil {
             ChannelSftp sftp = (ChannelSftp) channel;
             //使用ChannelSftp对象进行使用命令
             //进入需要进入的路径
-            sftp.cd(SftpModel.basePath);
+            sftp.cd(basePath);
             //进行文件上传
             sftp.put(input,fileName);
             

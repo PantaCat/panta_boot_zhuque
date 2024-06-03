@@ -22,6 +22,14 @@
          VALUES
         (#{name}, #{number}, #{linkAddress}, #{imgAddress})
     </insert>
+
+    <update id="updateData" parameterType="com.panta.model.link.LinkModel">
+        UPDATE panta_link SET name = #{name} ,`number` = #{number} , linkAddress = #{linkAddress}
+        <if test="imgAddress != null and imgAddress != ''">
+            ,imgAddress = #{imgAddress}
+        </if>
+        WHERE id = #{id}
+    </update>
     
     <delete id="deleteData" parameterType="com.panta.model.link.LinkModel">
         DELETE FROM panta_link where id = #{id}

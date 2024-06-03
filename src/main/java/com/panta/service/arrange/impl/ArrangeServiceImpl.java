@@ -33,4 +33,9 @@ public class ArrangeServiceImpl implements IArrangeService {
     public void deleteData(ArrangeModle am) {
         arrangeMapper.deleteData(am);
     }
+
+    @Override
+    public void arrangeData(ArrangeModle am) {
+        arrangeMapper.deleteData(am);
+    }
 }
