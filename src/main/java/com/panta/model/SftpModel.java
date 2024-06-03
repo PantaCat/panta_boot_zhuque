@@ -13,32 +13,32 @@ public class SftpModel {
     public static String imgBasePath;
     public static String imgBaseUrl;
     
-    @Value("${SFTP.ADDRESS}")
+    @Value("${LINUXADDRESS}")
     public void setHost(String host) {
         this.host = host;
     }
     
-    @Value("${SFTP.PORT}")
+    @Value("${LINUXPORT}")
     public void setPort(int port) {
         this.port = port;
     }
     
-    @Value("${SFTP.USERNAME}")
+    @Value("${LINUXUSERNAME}")
     public void setUserName(String userName) {
         this.userName = userName;
     }
     
-    @Value("${SFTP.PASSWORD}")
+    @Value("${LINUXPASSWORD}")
     public void setPassWord(String passWord) {
         this.passWord = passWord;
     }
     
-    @Value("${SFTP.BASEPATH}")
+    @Value("${LINUXIMGPATH}")
     public void setImgBasePath(String imgBasePath) {
         this.imgBasePath = imgBasePath;
     }
     
-    @Value("${IMAGE.BASE.URL}")
+    @Value("${IMGURL}")
     public void setImgBaseUrl(String imgBaseUrl) {
         this.imgBaseUrl = imgBaseUrl;
     }

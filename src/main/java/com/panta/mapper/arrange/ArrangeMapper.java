@@ -8,7 +8,6 @@ import java.util.List;
 public interface ArrangeMapper {
     List<ArrangeModle> queryDataList();
     int saveData(ArrangeModle lm);
-
     int updateData(ArrangeModle lm);
     int deleteData(ArrangeModle lm);
 }
