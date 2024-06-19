@@ -12,6 +12,8 @@ public class SftpModel {
     public static String passWord;
     public static String imgBasePath;
     public static String imgBaseUrl;
+    public static String fileBasePath;
+    public static String fileBaseUrl;
     
     @Value("${LINUXADDRESS}")
     public void setHost(String host) {
@@ -41,5 +43,15 @@ public class SftpModel {
     @Value("${IMGURL}")
     public void setImgBaseUrl(String imgBaseUrl) {
         this.imgBaseUrl = imgBaseUrl;
+    }
+
+    @Value("${LINUXFILEPATH}")
+    public void setFileBasePath(String fileBasePath) {
+        this.fileBasePath = fileBasePath;
+    }
+
+    @Value("${FILEURL}")
+    public void setFileBaseUrl(String fileBaseUrl) {
+        this.fileBaseUrl = fileBaseUrl;
     }
 }
