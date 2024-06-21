@@ -4,7 +4,6 @@ import com.panta.model.SftpModel;
 import com.panta.model.function.FileUploadModel;
 import com.panta.service.function.IFileUploadService;
 import com.panta.utils.FtpUtil;
-import com.panta.utils.LinuxUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

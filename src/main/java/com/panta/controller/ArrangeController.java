@@ -1,10 +1,9 @@
 package com.panta.controller;
 
-import com.panta.model.SftpModel;
 import com.panta.model.arrange.ArrangeModle;
 import com.panta.service.arrange.IArrangeService;
 import com.panta.utils.FtpUtil;
-import com.panta.utils.LinuxUtils;
+import com.panta.utils.LinuxUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -54,7 +53,7 @@ public class ArrangeController {
         FtpUtil.uploadFile(input, fileName, linuxAddress);
         CompletableFuture.supplyAsync(() -> {
             try {
-                LinuxUtils.sshExec(executeCommand);
+                LinuxUtil.sshExec(executeCommand);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

@@ -3,9 +3,7 @@ package com.panta.utils;
 import com.jcraft.jsch.*;
 import com.panta.model.SftpModel;
 
-import java.util.concurrent.CompletableFuture;
-
-public class LinuxUtils {
+public class LinuxUtil {
     public static void sshExec( String command) throws InterruptedException {
         JSch jsch = new JSch();
         Session session = null;
