@@ -8,6 +8,7 @@ import io.micrometer.common.util.StringUtils;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/main")
+@Slf4j
 public class LoginController {
 
     @Autowired
@@ -29,9 +31,9 @@ public class LoginController {
 
     @PostMapping("/login")
     public ResponseModel login(HttpServletRequest request, HttpServletResponse response, @RequestBody LoginUser loginUser){
+        log.info("测试日志");
         //获取客户端IP
         String remoteAddr = getRemoteAddr(request);
-        
         ResponseModel responseModel = new ResponseModel();
         if(StringUtils.isBlank(loginUser.getUserName()) || StringUtils.isBlank(loginUser.getPassWord())){
             responseModel.setCode("100");
